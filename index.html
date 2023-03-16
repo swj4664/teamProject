@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trvel Web Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+
+  <div id="container">
+    <div class="mainBtn">
+      <li value="1"><a href=""></a></li>
+      <li value="2"><a href=""></a></li>
+      <li value="3"><a href=""></a></li>
+      <li value="4"><a href=""></a></li>
+      <li value="5"><a href=""></a></li>
+    </div>
+
+    <header class="header">
+      <div class="Top">
+        <img src="./img/비행기.jpg" alt="!" />
+        <h1 class="imglogo">Travel</h1>
+      </div>
+      <ul class="depth1">
+        <li class="">
+          사이트소개
+          <ul class="depth2">
+            <li>사이트소개</li>
+            <li>이용안내</li>
+            <li>게시판</li>
+            <li>예약후기</li>
+          </ul>
+        </li>
+        <li class="">
+          이용안내
+          <ul class="depth2">
+            <li>사이트소개</li>
+            <li>이용안내</li>
+            <li>게시판</li>
+            <li>예약후기</li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="./crud/index.html">
+          게시판
+          <!-- <ul class="depth2">
+            <li>사이트소개</li>
+            <li>이용안내</li>
+            <li>게시판</li>
+            <li>예약후기</li>
+          </ul> -->
+        </a>
+        </li>
+        <li class="">
+          예약후기
+          <ul class="depth2">
+            <li>사이트소개</li>
+            <li>이용안내</li>
+            <li>게시판</li>
+            <li>예약후기</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="login" onclick="show()">
+        <li class="icon"><img src="./img/user.png" alt=""></li>
+        <span>로그인</span>
+      </div>
+    </header>
+
+    <div class="loginPage">
+      <div class="close" onclick="close()"><i class="fa-solid fa-xmark"></i></div>
+      <h2>Sign Up</h2>
+      <form>
+        <div class="inputgroup">
+          <div class="inputfield">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="name">
+          </div>
+          <!-- <div class="inputfield">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="email">
+          </div> -->
+          <div class="inputfield">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="password">
+          </div>
+          <p>비밀번호를 잊으셨나요?<a href="#">여기를 클릭하세요!</a></p>
+        </div>
+        <div class="btngroup">
+          <button type="button">로그인</button>
+          <button type="button" class="bbt" onclick="shows()">회원가입</button>
+        </div>
+      </form>
+    </div>
+    <div class="loginPage2">
+      <div class="close2" onclick="close2()"><i class="fa-solid fa-xmark"></i></div>
+      <h2>Join In</h2>
+      <form>
+        <div class="inputgroup2">
+          <div class="inputfield2">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="name">
+          </div>
+          <div class="inputfield2">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="email">
+          </div>
+          <div class="inputfield2">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="password">
+          </div>
+          <p>비밀번호를 잊으셨나요?<a href="#">여기를 클릭하세요!</a></p>
+        </div>
+        <div class="btngroup2">
+          <button type="button" class="bbt2" onclick="reshow()">로그인</button>
+          <button type="button">회원가입</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 섹션1 -->
+    <section class="section section1">
+
+      <!-- 배경 오퍼시티 -->
+      <div class="backOpacity"></div>
+      <div class="sectionInner">
+        
+        <div class="slideG slideG1">
+          <!-- left버튼 -->
+          <div class="pre" onclick="prevSlide()">
+            <button class="innerPre">&lt;</button>
+          </div>
+          <!-- 슬라이드 -->
+          <div id="imgContainer">
+            <div class="imgBox">
+              <div class="img img1">
+                <img src="./img/seoul1.png" alt="#">
+              </div>
+              <div class="img img1">
+                <img src="./img/seoul2.png" alt="#">
+              </div>
+              <div class="img img1">
+                <img src="./img/seoul3.png" alt="#">
+              </div>
+            </div>
+            <div class="imgButton">
+              <button class="btn" value="0" onclick="btnClick(event)"></button>
+              <button class="btn" value="1" onclick="btnClick(event)"></button>
+              <button class="btn" value="2" onclick="btnClick(event)"></button>
+            </div>
+          </div>
+          <!-- right버튼 -->
+          <div class="next" onclick="nextSlide()">
+            <button class="innerNext">&gt;</button>
+          </div>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="title">
+          <p>서울 Seoul</p>
+          <li class="clickImg"><a href="./api/ipa.html">지도보기</a></li>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 섹션2 -->
+    <section class="section section2">
+
+      <!-- 배경 오퍼시티 -->
+      <div class="backOpacity"></div>
+      <div class="sectionInner">
+        <!-- left버튼 -->
+        <div class="pre" onclick="prevSlide2()">
+          <button class="innerPre">&lt;</button>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div id="imgContainer">
+          <div class="imgBox2">
+            <div class="img img2">
+              <img src="./img/seoul1.png" alt="#">
+            </div>
+            <div class="img img2">
+              <img src="./img/seoul2.png" alt="#">
+            </div>
+            <div class="img img2">
+              <img src="./img/seoul3.png" alt="#">
+            </div>
+          </div>
+          <div class="imgButton">
+            <button class="btn" value="0" onclick="btnClick2(event)"></button>
+            <button class="btn" value="1" onclick="btnClick2(event)"></button>
+            <button class="btn" value="2" onclick="btnClick2(event)"></button>
+          </div>
+        </div>
+
+        <!-- right버튼 -->
+        <div class="next" onclick="nextSlide2()">
+          <button class="innerNext">&gt;</button>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="title">
+          <p>충청도 ChungcheongDo</p>
+          <li class="clickImg"><a href="./api/ipa.html">지도보기</a></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션3 -->
+    <section class="section section3">
+
+      <!-- 배경 오퍼시티 -->
+      <div class="backOpacity"></div>
+      <div class="sectionInner">
+        <!-- left버튼 -->
+        <div class="pre" onclick="prevSlide3()">
+          <button class="innerPre">&lt;</button>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div id="imgContainer">
+          <div class="imgBox3">
+            <div class="img img3">
+              <img src="./img/seoul1.png" alt="#">
+            </div>
+            <div class="img img3">
+              <img src="./img/seoul2.png" alt="#">
+            </div>
+            <div class="img img3">
+              <img src="./img/seoul3.png" alt="#">
+            </div>
+          </div>
+          <div class="imgButton">
+            <button class="btn" value="0" onclick="btnClick3(event)"></button>
+            <button class="btn" value="1" onclick="btnClick3(event)"></button>
+            <button class="btn" value="2" onclick="btnClick3(event)"></button>
+          </div>
+        </div>
+
+        <!-- right버튼 -->
+        <div class="next" onclick="nextSlide3()">
+          <button class="innerNext">&gt;</button>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="title">
+          <p>
+            경상도 GyeongsangDo</p>
+          <li class="clickImg"><a href="./api/ipa.html">지도보기</a></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션4 -->
+    <section class="section section4">
+
+      <!-- 배경 오퍼시티 -->
+      <div class="backOpacity"></div>
+      <div class="sectionInner">
+        <!-- left버튼 -->
+        <div class="pre" onclick="prevSlide4()">
+          <button class="innerPre">&lt;</button>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div id="imgContainer">
+          <div class="imgBox4">
+            <div class="img img4">
+              <img src="./img/seoul1.png" alt="#">
+            </div>
+            <div class="img img4">
+              <img src="./img/seoul2.png" alt="#">
+            </div>
+            <div class="img img4">
+              <img src="./img/seoul3.png" alt="#">
+            </div>
+          </div>
+          <div class="imgButton">
+            <button class="btn" value="0" onclick="btnClick4(event)"></button>
+            <button class="btn" value="1" onclick="btnClick4(event)"></button>
+            <button class="btn" value="2" onclick="btnClick4(event)"></button>
+          </div>
+        </div>
+
+        <!-- right버튼 -->
+        <div class="next" onclick="nextSlide4()">
+          <button class="innerNext">&gt;</button>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="title">
+          <p>전라도 JeonLaDo</p>
+          <li class="clickImg"><a href="./api/ipa.html">지도보기</a></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션5 -->
+    <section class="section section5">
+
+      <!-- 배경 오퍼시티 -->
+      <div class="backOpacity"></div>
+      <div class="sectionInner">
+        <!-- left버튼 -->
+        <div class="pre" onclick="prevSlide5()">
+          <button class="innerPre">&lt;</button>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div id="imgContainer">
+          <div class="imgBox5">
+            <div class="img img5">
+              <img src="./img/seoul1.png" alt="#">
+            </div>
+            <div class="img img5">
+              <img src="./img/seoul2.png" alt="#">
+            </div>
+            <div class="img img5">
+              <img src="./img/seoul3.png" alt="#">
+            </div>
+          </div>
+          <div class="imgButton">
+            <button class="btn" value="0" onclick="btnClick5(event)"></button>
+            <button class="btn" value="1" onclick="btnClick5(event)"></button>
+            <button class="btn" value="2" onclick="btnClick5(event)"></button>
+          </div>
+        </div>
+
+        <!-- right버튼 -->
+        <div class="next" onclick="nextSlide5()">
+          <button class="innerNext">&gt;</button>
+        </div>
+
+        <!-- 타이틀 -->
+        <div class="title">
+          <p>강원도 GangWonDo</p>
+          <li class="clickImg"><a href="./api/ipa.html">지도보기</a></li>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/common.js"></script> -->
+    <!-- <script>
+var mHtml=$("html");
+// mHtml.animate({ scrollTop: 0 }, 10);
+
+$(window).on("wheel",function(e){
+if(mHtml.is(":animated"))return;
+if(e.originalEvent.deltaY>0){
+if(forSlide==4)return;
+forSlide++;
+}else if(e.originalEvent.deltaY<0){
+if(forSlide==1)return;
+forSlide--;
+}
+
+var posTop=(forSlide-1)*$(window).height();
+mHtml.animate({scrollTop:posTop});
+})
+
+    </script> -->
+</body>
+
+</html>

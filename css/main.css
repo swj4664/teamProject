@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.mainBtn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 50px;
+  z-index: 999;
+}
+
+.mainBtn > li {
+  cursor: pointer;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+#container > .header {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  z-index: 1;
+}
+
+#container .header .Top {
+  display: flex;
+}
+
+#container .header .Top > img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+
+#container .header .depth1 {
+  display: flex;
+}
+
+#container .header .depth1 > li {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  letter-spacing: 0.3em;
+  color: rgb(80, 80, 80);
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#container .header .depth1 > li .depth2 {
+  position: absolute;
+  top: 100%;
+  left: 2rem;
+  display: none;
+  
+  background-color: rgba(240, 248, 255, 0.2);
+  font-weight: 100;
+}
+
+#container .header .depth1 > li:hover .depth2 {
+  display: block;
+  text-align: left;
+  width: 150px;
+}
+
+#container .header .depth1 > li .depth2 li {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  /* padding-right: 1rem; */
+  /* width: 150px; */
+}
+
+#container .header .depth1 > li .depth2 li:hover {
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+#container .login {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#container .login .icon {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0.2em;
+  background-color: rgba(240, 248, 255);
+  border-radius: 50px;
+}
+
+#container .login span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  padding-right: 0.5rem;
+}
+
+#container .loginPage {
+  display: none;
+  text-align: center;
+  width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  padding: 9rem 6rem;
+  border-radius: 30px;
+}
+
+.loginPage .close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+}
+
+#container .loginPage h2 {
+  position: relative;
+  bottom: 4rem;
+  font-size: 3rem;
+  color: rgba(74, 74, 238, 0.712);
+}
+
+#container .loginPage .inputfield {
+  display: flex;
+  align-items: center;
+  margin: 25px 10px;
+  border-radius: 3px;
+  background-color: #eaeaea;
+}
+
+#container .inputfield i {
+  margin-left: 15px;
+  color: #999;
+}
+
+#container input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+
+.btngroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btngroup button {
+  flex-basis: 48%;
+  background-color: rgba(120, 120, 254, 0.712);
+  height: 60px;
+  border-radius: 35px;
+  border: 0;
+  outline: 0;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.btngroup button:hover {
+  background-color: rgba(120, 120, 254, 1);
+}
+
+#container .loginPage2 {
+  display: none;
+  text-align: center;
+  width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  padding: 9rem 6rem;
+  border-radius: 30px;
+}
+
+.loginPage2 .close2 {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+  color: rgb(102, 102, 102);
+  cursor: pointer;
+}
+
+#container .loginPage2 h2 {
+  position: relative;
+  bottom: 4rem;
+  font-size: 3rem;
+  color: rgba(74, 74, 238, 0.712);
+}
+
+#container .loginPage2 .inputfield2 {
+  display: flex;
+  align-items: center;
+  margin: 25px 10px;
+  border-radius: 3px;
+  background-color: #eaeaea;
+}
+
+#container .loginPage2 .inputfield2 i {
+  margin-left: 15px;
+  color: #999;
+}
+
+#container .loginPage2 input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+
+.loginPage2 .btngroup2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginPage2 .btngroup2 button {
+  flex-basis: 48%;
+  background-color: rgba(120, 120, 254, 0.712);
+  height: 60px;
+  border-radius: 35px;
+  border: 0;
+  outline: 0;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.btngroup2 button:hover {
+  background-color: rgba(120, 120, 254, 1);
+}
+
+#container .section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container .section1 {
+  background-image: url("../img/광화문.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .section2 {
+  background-image: url("../img/chung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .section3 {
+  background-image: url("../img/chungchung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .section4 {
+  background-image: url("../img/rado.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .section5 {
+  background-image: url("../img/광화문.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .section .backOpacity {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 0.4;
+}
+
+#container .section .sectionInner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#container .section .sectionInner .slideG {
+  position: relative;
+}
+
+#container .section .sectionInner .pre {
+  display: inline-block;
+  top: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 3rem;
+  z-index: 9;
+}
+
+.innerPre {
+  cursor: pointer;
+}
+
+#container .section .sectionInner .pre > button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#container .section .sectionInner .next {
+  display: inline-block;
+  top: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  right: 1.5rem;
+}
+
+.innerNext {
+  cursor: pointer;
+}
+
+#container .section .sectionInner .next > button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#container .section .sectionInner .title {
+  width: 500px;
+  margin-left: 2em;
+  text-align: center;
+  font-size: 40px;
+}
+
+#container .section .sectionInner .title p {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#container .section .sectionInner .title .clickImg {
+  padding: 18px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#imgContainer {
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  height: 650px;
+  margin: 0 1em;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+#imgContainer .imgBox {
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+#imgContainer .imgBox .img img {
+  border-radius: 10px;
+}
+
+#imgContainer .imgButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#imgContainer .imgButton .btn {
+  cursor: pointer;
+  margin: 0 0.1em;
+  background-color: rgb(255, 255, 255, 0.4);
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: none;
+  text-shadow: 2px 2px 2px rgb(51, 51, 51);
+}
+
+#imgContainer .imgBox2 {
+  width: 100%;
+  display: flex;
+  
+}
+
+#imgContainer .imgBox2 .img {
+  border-radius: 10px;
+}
+
+#imgContainer .imgBox3 {
+  width: 100%;
+  display: flex;
+  
+}
+
+#imgContainer .imgBox3 .img {
+  border-radius: 10px;
+}
+
+#imgContainer .imgBox4 {
+  width: 100%;
+  display: flex;
+  
+}
+
+#imgContainer .imgBox4 .img {
+  border-radius: 10px;
+}
+
+#imgContainer .imgBox5 {
+  width: 100%;
+  display: flex;
+  
+}
+
+#imgContainer .imgBox5 .img {
+  border-radius: 10px;
+}
